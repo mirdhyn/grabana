@@ -344,3 +344,12 @@ func Repeat(repeat string) Option {
 		return nil
 	}
 }
+
+// Transparent makes the background transparent.
+func ColorScheme(name string) Option {
+	return func(heatmap *Heatmap) error {
+		panel.Builder.HeatmapPanel.Color.ColorScheme = name
+
+		return nil
+	}
+}
